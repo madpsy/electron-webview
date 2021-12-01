@@ -51,15 +51,15 @@ You just need to change the `src` attribute of the `webview` in `index.html` fil
 Alternatively, it's also possible to just load an external URL:
 
 ```js
-  // Comment
-  //mainWindow.loadURL(`file://${__dirname}/index.html`); // Load custom html file with external content using webview tag
+// Comment
+//mainWindow.loadURL(`file://${__dirname}/index.html`); // Load custom html file with external content using webview tag
 
-  // Uncomment
-  mainWindow.loadURL("https://github.com"); // Load directly an URL if you don't need interface customization
+// Uncomment
+mainWindow.loadURL('https://github.com'); // Load directly an URL if you don't need interface customization
 
-   // Or uncomment if you prefer to use BrowserView:
-  const view = require("./src/view");
-  view.createBrowserView(mainWindow);
+// Or uncomment if you prefer to use BrowserView:
+const view = require('./src/view');
+view.createBrowserView(mainWindow);
 ```
 
 ### Developer tools
@@ -136,13 +136,13 @@ You can activate/deactivate this topbar (activate by default).
 - Don't forget to set the homepage of your app in the `data-home` attribute of `webview` in `index.html` file to make the "Home" button works.
 
 ```html
-  <!-- Webview -->
-  <webview
-    id="webview"
-    autosize="on"
-    src="https://www.github.com"
-    data-home="https://www.github.com"
-  ></webview>
+<!-- Webview -->
+<webview
+  id="webview"
+  autosize="on"
+  src="https://www.github.com"
+  data-home="https://www.github.com"
+></webview>
 ```
 
 ## Application
@@ -258,6 +258,12 @@ $ npm run create-installer-mac
 ```
 
 ## Source
+
+### The repository is a fork of cba85/electron-webview
+
+- Visit the repository [here](https://github.com/cba85/electron-webview).
+- Since the repo was using older versions of `electron` and `@electron/remote`, I have forked it to update the packages.
+- I also aim to update and add new features while keeping the repository and code simple.
 
 Based on:
 
