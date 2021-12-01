@@ -1,17 +1,17 @@
 // Utilities
-const path = require("path");
-const fs = require("fs");
+const path = require('path');
+const fs = require('fs');
 
 // Electron
-const { app, Menu } = require("electron");
-require("@electron/remote/main").initialize();
+const { app, Menu } = require('electron');
+require('@electron/remote/main').initialize();
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.allowRendererProcessReuse = true;
-app.on("ready", () => {
+app.on('ready', () => {
   // Main window
-  const window = require("./src/window");
+  const window = require('./src/window');
   mainWindow = window.createBrowserWindow(app);
 
   // Option 1: Uses Webtag and load a custom html file with external content
@@ -28,13 +28,13 @@ app.on("ready", () => {
   //mainWindow.openDevTools();
 
   // Menu (for standard keyboard shortcuts)
-  const menu = require("./src/menu");
+  const menu = require('./src/menu');
   const template = menu.createTemplate(app.name);
   const builtMenu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(builtMenu);
 });
 
 // Quit when all windows are closed.
-app.on("window-all-closed", () => {
+app.on('window-all-closed', () => {
   app.quit();
 });
