@@ -11,7 +11,7 @@ exports.createBrowserWindow = app => {
     //frame: false,
     backgroundColor: '#fff',
     webPreferences: {
-      devTools: true, // false if you want to remove dev tools access for the user
+      devTools: false, // true if you want to make the dev tools accessible to the user.
       contextIsolation: true,
       enableRemoteModule: true, // required for print function [removed since Electron 12, uses https://github.com/electron/remote]
       webviewTag: true, // https://www.electronjs.org/docs/api/webview-tag,
