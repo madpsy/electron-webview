@@ -15,7 +15,8 @@ exports.createBrowserWindow = app => {
       contextIsolation: true,
       enableRemoteModule: true, // required for print function [removed since Electron 12, uses https://github.com/electron/remote]
       webviewTag: true, // https://www.electronjs.org/docs/api/webview-tag,
-      preload: path.join(__dirname, '../preload.js') // required for print function
+      preload: path.join(__dirname, '../preload.js'), // required for print function,
+      title: 'New App'
     }
   });
 };
