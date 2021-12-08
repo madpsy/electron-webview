@@ -28,6 +28,11 @@ app.on('ready', () => {
   //mainWindow.openDevTools();
 
   // Menu (for standard keyboard shortcuts)
+  // This is a custom menu created with a template.
+  // For now this has been disabled by sending null
+  // to the setApplication menu function.
+  // Uncomment the below lines and comment out
+  // where we have passed null as said above.
   // const menu = require('./src/menu');
   // const template = menu.createTemplate(app.name);
   // const builtMenu = Menu.buildFromTemplate(template);

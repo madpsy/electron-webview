@@ -9,7 +9,7 @@ exports.createBrowserWindow = app => {
     icon: path.join(__dirname, 'assets/icons/png/64x64.png'),
     //titleBarStyle: 'hidden',
     //frame: false,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     webPreferences: {
       devTools: false, // true if you want to make the dev tools accessible to the user.
       contextIsolation: true,
